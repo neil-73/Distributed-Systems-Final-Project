@@ -1,0 +1,96 @@
+HowTo.txt
+
+Steps to compile RMI:
+
+Open command prompt 
+
+C:\set path=c:\jdk1.5\bin; 
+C:\jdk1.5\bin>javac BankIntf.java 
+C:\jdk1.5\bin>javac BankImpl.java 
+C:\jdk1.5\bin>javac BankServer.java 
+C:\jdk1.5\bin>javac BankClient.java 
+C:\jdk1.5\bin>rmic BankImpl 
+C:\jdk1.5\bin>start rmiregistry 
+C:\jdk1.5\bin>java BankServer 
+	
+	Server is ready...
+
+Open New Command Prompt 
+
+C:\set path=c:\jdk1.5\bin; 
+C:\jdk1.5\bin>java BankClient <localhost>
+
+	Welcome to the Distributed Banking System!
+
+	Please enter your username:
+	neil.ramdath@uoit.net
+
+	Please enter your account number:
+	100519195
+
+	Please enter the initial amount of money you have in your bank account (in dollars):
+	$5000
+
+	Please select one of the following 4 options:
+
+		1. Withdraw
+		2. Deposit
+		3. Balance
+		4. Exit
+
+	Please enter your desired option number:
+	1 
+
+	Please enter the amount you would like to withdraw (in dollars):
+	$1000
+
+	Username:			neil.ramdath@uoit.net
+	Account Number:		100519195
+
+	--> New account balance: $4000
+
+	Please select one of the following 4 options:
+
+		1. Withdraw
+		2. Deposit
+		3. Balance
+		4. Exit
+
+	Please enter your desired option number:
+	2 
+
+	Please enter the amount you would like to deposit (in dollars)
+	$75
+
+	Username:			neil.ramdath@uoit.net
+	Account Number:		100519195
+
+	--> New account balance: $4075
+
+	Please select one of the following 4 options:
+
+		1. Withdraw
+		2. Deposit
+		3. Balance
+		4. Exit
+
+	Please enter your desired option number:
+	3
+
+	Username:			neil.ramdath@uoit.net
+	Account Number:		100519195
+
+	--> Your current balance is: $4075
+
+	Please select one of the following 4 options:
+
+		1. Withdraw
+		2. Deposit
+		3. Balance
+		4. Exit
+
+	Please enter your desired option number:
+	4
+
+	Thank you for using the Distributed Banking System.
+	We hope you enjoyed your banking experience. Enjoy your day!
